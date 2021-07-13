@@ -1,0 +1,53 @@
+GET http://localhost/items
+
+###
+
+GET http://localhost/items/11
+
+###
+
+POST http://localhost/items
+Content-Type: application/json
+
+{
+  "label" : "T-Shirt",
+  "description": "Nice!",
+  "filename": "/photo/db/1",
+  "price": "99.9"
+}
+
+###
+
+POST http://localhost/items
+Content-Type: application/json
+
+{
+  "label" : "Pants",
+  "description": "Ohhhhh!",
+  "filename": "фафафафафафафафа",
+  "price": "75.9"
+}
+
+###
+
+PATCH http://localhost/items/11
+Content-Type: application/json
+
+{
+  "label" : "Shirt",
+  "description": "Nice!",
+  "filename": "фафа",
+  "price": "100.0"
+}
+
+###
+
+DELETE http://localhost/items/2
+
+###
+
+GET http://localhost/items/1/orders
+
+###
+
+GET http://localhost/items/2/category
